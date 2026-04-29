@@ -1,0 +1,41 @@
+# Camera and Source Settings
+# For video_source you could use:
+# - 0 for embbebed (and usually low quality) webcam
+# - 1 for a USB Webcam (when you want live feed from a on-board machine ex: a small computer from the entrance of a parking)
+# - "fullfilepath" or "filepath_from_relative_folder.mp4"
+# You can use an RTSP stream link
+video_source: "traffic_cam.mp4"
+
+# for creating a video within the added opencv layer for reviewing purposes
+output_video_name: "output_traffic.mp4"
+
+#excel output filename with extension
+output_excel_name: "traffic_data.xlsx"
+
+# Counting Logic stuff
+#for "horizontal" you must set the height, while for "vertical" the width where the line should be drawn, and match the ROI Region
+line_direction: "horizontal"
+line_position: 410
+offset: 15
+
+# ROI Points (Stored as a list of lists), you can setup video_source then run get_roi.py for getting this var
+roi_points:
+  - [ 411, 378 ]
+  - [ 753, 377 ]
+  - [ 723, 650 ]
+  - [ 211, 643 ]
+
+# Model Settings | Feel free to play with it
+#yolov8s.pt is the minimal required for an setup of (Core i5 13420H + Intel UHD Graphics With 16gb DDR4 SODIMM)
+#yolov8l.pt is fine for a "Common" setup of (Ryzen 7 5800X (waterCooled) + RTX 3070Ti With 16gb DDR4 3200 (dual-channel))
+model_path: "yolov8s.pt"
+
+#set this to true to use the nvidia GPU to gain FPS by enforcing GPU usage | Still implementing
+#for that to work you must have a pytorch with cuda support, if you dont know what are you doing leave this on false
+nvidia_gpu: false
+
+#The Target Classes are for 2 = car, 3 = motorcycle, 5 = bus, 7 = truck
+target_classes: [ 2, 3, 5, 7 ]
+
+# Save Crops?
+save_crops: true
