@@ -5,7 +5,7 @@ A Python implementation of Ultralytics YoloV8 for Traffic Counting, used for stu
 ## Prerequisites:
 
 * Python 3.12.3 with requirements.txt modules
-* Windows 10/11 (OS Module)
+* Windows 10/11 (You can surely use Linux, the development took place on Windows tho)
 * Video Source (Webcam preferably a USB one, .mp4 file or RTSP Stream Link)
 
 ## Project Structure:
