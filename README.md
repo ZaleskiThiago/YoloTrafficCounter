@@ -51,7 +51,7 @@ cd src
 python get_roi.py
 ```
 
-tne output will be in full var:value format for the .yaml file
+the output will be in full var:value format for the .yaml file
 
 You can use the info to set your line_position var too, and line_direction in case if you need a vertical approach
 
