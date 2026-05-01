@@ -1,4 +1,5 @@
-*.xlsx
-*.mp4
-.pt
-*Zone.Identifier
+src/*.xlsx
+src/*.mp4
+src/*Zone.Identifier
+src/*.pt
+src/crops/

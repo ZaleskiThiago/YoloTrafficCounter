@@ -15,15 +15,15 @@ output_excel_name: "traffic_data.xlsx"
 # Counting Logic stuff
 #for "horizontal" you must set the height, while for "vertical" the width where the line should be drawn, and match the ROI Region
 line_direction: "horizontal"
-line_position: 410
+line_position: 736
 offset: 15
 
 # ROI Points (Stored as a list of lists), you can setup video_source then run get_roi.py for getting this var
 roi_points:
-  - [ 411, 378 ]
-  - [ 753, 377 ]
-  - [ 723, 650 ]
-  - [ 211, 643 ]
+  - [786, 415]
+  - [974, 407]
+  - [1140, 736]
+  - [593, 736]
 
 # Model Settings | Feel free to play with it
 #yolov8s.pt is the minimal required for an setup of (Core i5 13420H + Intel UHD Graphics With 16gb DDR4 SODIMM)
